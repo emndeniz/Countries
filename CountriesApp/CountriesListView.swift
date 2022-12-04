@@ -7,20 +7,20 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CountriesListView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
+            Image(systemName: "photo.circle")
+                .frame(width: 300, height: 300)
+                .foregroundColor(.red)
             Text("Hello, world!")
         }
         .padding()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CountriesListView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CountriesListView()
     }
 }
