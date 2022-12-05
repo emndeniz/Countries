@@ -1,6 +1,6 @@
 //
 //  AllCountriesResponseModel.swift
-//  CountriesApp
+//  Countries
 //
 //  Created by Emin on 16.09.2022.
 //
@@ -291,7 +291,7 @@ enum Region: String, Codable {
 enum StartOfWeek: String, Codable {
     case monday = "monday"
     case sunday = "sunday"
-    case turday = "turday"
+    case saturday = "saturday"
 }
 
 enum Status: String, Codable {

@@ -1,6 +1,6 @@
 //
 //  ServiceBAse.swift
-//  CountriesApp
+//  Countries
 //
 //  Created by Emin on 16.09.2022.
 //
@@ -18,10 +18,11 @@ protocol ServiceBase {
 
 
 extension ServiceBase {
-    public var urlRequest: URLRequest {
+    public var urlRequest: URLRequest? {
         guard let url = self.url else {
             // Prevent incorrect url generations on development time.
-            fatalError("URL request could not be built.")
+            print("Missing URL for route: \(self)")
+            return nil
         }
         
         var request = URLRequest(url: url)

@@ -1,6 +1,6 @@
 //
 //  AllCountriesService.swift
-//  CountriesApp
+//  Countries
 //
 //  Created by Emin on 16.09.2022.
 //
@@ -8,12 +8,12 @@
 import Foundation
 
 /// This enum handles All Countries request to Countries API.
-enum AllCountriesServices {
+enum AllCountriesService {
     case all
 }
 
 
-extension AllCountriesServices: ServiceBase {
+extension AllCountriesService: ServiceBase {
     var path: String {
         
         switch self {

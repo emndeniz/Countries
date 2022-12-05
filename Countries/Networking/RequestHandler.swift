@@ -1,14 +1,18 @@
 //
 //  ServiceProvider.swift
-//  CountriesApp
+//  Countries
 //
 //  Created by Emin on 15.09.2022.
 //
 import Foundation
 
+protocol RequestHandling {
+    func request<T>(service: ServiceBase, completion: @escaping (Result<T, APIError>) -> Void) where T:Decodable
+}
+
 
 /// Service Provider manages URLSession process
-class ServiceProvider<T: ServiceBase> {
+class RequestHandler: RequestHandling {
     var urlSession:URLSession
     
     init(urlSession: URLSession = .shared ) {
@@ -21,13 +25,18 @@ class ServiceProvider<T: ServiceBase> {
     ///   - service: Service Type
     ///   - decodeType: Decoder Type to return response
     ///   - completion: Completion with Service Result
-    func request<U>(service:T, decodeType: U.Type, completion: @escaping ((ServiceResult<U>) -> Void)) where U: Decodable {
-        execute(service.urlRequest) { result in
+    func request<T>(service: ServiceBase, completion: @escaping (Result<T, APIError>) -> Void) where T : Decodable {
+    //func request<U>(service:T, decodeType: U.Type, completion: @escaping ((ServiceResult<U>) -> Void)) where U: Decodable {
+        guard let request = service.urlRequest else {
+            completion(.failure(.invalidRequest))
+            return
+        }
+        execute(request) { result in
             switch result {
             case .success(let data):
                 let decoder = JSONDecoder()
                 do {
-                    let response = try decoder.decode(decodeType, from: data)
+                    let response =  try decoder.decode(T.self, from: data)
                     print("Successfull response received, response:\(response)")
                     completion(.success(response))
                 }

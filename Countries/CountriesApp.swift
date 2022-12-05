@@ -1,6 +1,6 @@
 //
 //  CountriesAppApp.swift
-//  CountriesApp
+//  Countries
 //
 //  Created by Emin on 5.12.2022.
 //
@@ -8,10 +8,11 @@
 import SwiftUI
 
 @main
-struct CountriesAppApp: App {
+struct CountriesApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            CountriesListView()
+            ListView(viewModel: ListViewModel())
         }
     }
 }

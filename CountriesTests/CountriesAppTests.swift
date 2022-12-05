@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import CountriesApp
+@testable import Countries
 
 final class CountriesAppTests: XCTestCase {
 
