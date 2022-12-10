@@ -8,10 +8,25 @@
 import Foundation
 import MapKit
 
-struct DetailModel {
-    
-    private let item:AllCountriesResponseModelElement?
 
+class DetailModel {
+    
+    private let item:CountryResponseModelElement?
+
+    private let missingDataText = "Data missing"
+
+    private let numberFormatter = NumberFormatter()
+    @Published var location: MKCoordinateRegion
+    
+    init(item: CountryResponseModelElement?) {
+            self.item = item
+            numberFormatter.numberStyle = .decimal
+            self.location = MKCoordinateRegion(center:
+                                                CLLocationCoordinate2D(latitude:  item?.capitalInfo?.latlng?.first ?? 0,
+                                                                       longitude:  item?.capitalInfo?.latlng?.last ?? 0),
+                                               span: MKCoordinateSpan(latitudeDelta: 9, longitudeDelta: 9))
+    }
+    
     
     var flagURL : URL? {
         return URL(string:"")
@@ -41,8 +56,4 @@ struct DetailModel {
         return String(format: "%.1f", "123456")
     }
     
-    var location: MKCoordinateRegion {
-        MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 48.87, longitude: 2.33),
-                           span: MKCoordinateSpan(latitudeDelta: 9, longitudeDelta: 9))
-    }
 }
