@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct CellViewModel: Identifiable{
+struct CellModel: Identifiable{
     var id: String = UUID().uuidString
     
     private let item:AllCountriesResponseModelElement?

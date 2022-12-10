@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		012670B62944A5C200584314 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012670B52944A5C200584314 /* CellView.swift */; };
-		012670B92944B7BC00584314 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012670B82944B7BC00584314 /* CellViewModel.swift */; };
+		012670B92944B7BC00584314 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012670B82944B7BC00584314 /* CellModel.swift */; };
 		012670BC2944B80F00584314 /* JSONTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012670BB2944B80F00584314 /* JSONTestHelper.swift */; };
 		012670BE2944B81D00584314 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012670BD2944B81D00584314 /* MockURLProtocol.swift */; };
 		012670C82944B94B00584314 /* AllCountriesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 012670C72944B94B00584314 /* AllCountriesResponse.json */; };
@@ -52,7 +52,7 @@
 
 /* Begin PBXFileReference section */
 		012670B52944A5C200584314 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
-		012670B82944B7BC00584314 /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
+		012670B82944B7BC00584314 /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
 		012670BB2944B80F00584314 /* JSONTestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTestHelper.swift; sourceTree = "<group>"; };
 		012670BD2944B81D00584314 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		012670C72944B94B00584314 /* AllCountriesResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AllCountriesResponse.json; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				012670B52944A5C200584314 /* CellView.swift */,
-				012670B82944B7BC00584314 /* CellViewModel.swift */,
+				012670B82944B7BC00584314 /* CellModel.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -447,7 +447,7 @@
 				012670B62944A5C200584314 /* CellView.swift in Sources */,
 				012670BC2944B80F00584314 /* JSONTestHelper.swift in Sources */,
 				0194F146293D507D00AE655A /* ListViewModel.swift in Sources */,
-				012670B92944B7BC00584314 /* CellViewModel.swift in Sources */,
+				012670B92944B7BC00584314 /* CellModel.swift in Sources */,
 				012670BE2944B81D00584314 /* MockURLProtocol.swift in Sources */,
 				0194F141293D506300AE655A /* ServiceBase.swift in Sources */,
 				0194F13F293D506300AE655A /* CountryResponseModel.swift in Sources */,

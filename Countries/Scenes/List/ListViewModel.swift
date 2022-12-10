@@ -9,7 +9,7 @@ import Foundation
 
 class ListViewModel : ObservableObject {
     
-    @Published var dataSource : [CellViewModel] = []
+    @Published var dataSource : [CellModel] = []
 
     private var requestHandler : RequestHandling
     init(requestHandler:RequestHandling = RequestHandler() ) {
@@ -30,9 +30,9 @@ class ListViewModel : ObservableObject {
     }
     
     private func setCellData(allCountries:AllCountriesResponseModel) {
-        var tempDataSource : [CellViewModel] = []
+        var tempDataSource : [CellModel] = []
         for contry in allCountries {
-            let cellModel = CellViewModel(item: contry)
+            let cellModel = CellModel(item: contry)
             tempDataSource.append(cellModel)
         }
         

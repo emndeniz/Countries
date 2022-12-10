@@ -9,10 +9,10 @@ import SwiftUI
 
 struct CellView: View {
     
-    private let viewModel: CellViewModel
+    private let viewModel: CellModel
     
     
-    init(viewModel: CellViewModel) {
+    init(viewModel: CellModel) {
         self.viewModel = viewModel
     }
     
@@ -50,7 +50,7 @@ struct CellView: View {
 
 struct CellView_Previews: PreviewProvider {
     static var previews: some View {
-        CellView(viewModel: CellViewModel(item: nil))
+        CellView(viewModel: CellModel(item: nil))
     }
 }
 
