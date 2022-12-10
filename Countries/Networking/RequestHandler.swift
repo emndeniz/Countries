@@ -7,7 +7,7 @@
 import Foundation
 
 protocol RequestHandling {
-    func request<T>(service: ServiceBase, completion: @escaping (Result<T, APIError>) -> Void) where T:Decodable
+    func request<T>(service: APIRoute, completion: @escaping (Result<T, APIError>) -> Void) where T:Decodable
 }
 
 
@@ -25,9 +25,9 @@ class RequestHandler: RequestHandling {
     ///   - service: Service Type
     ///   - decodeType: Decoder Type to return response
     ///   - completion: Completion with Service Result
-    func request<T>(service: ServiceBase, completion: @escaping (Result<T, APIError>) -> Void) where T : Decodable {
+    func request<T>(service: APIRoute, completion: @escaping (Result<T, APIError>) -> Void) where T : Decodable {
     //func request<U>(service:T, decodeType: U.Type, completion: @escaping ((ServiceResult<U>) -> Void)) where U: Decodable {
-        guard let request = service.urlRequest else {
+        guard let request = service.asRequest() else {
             completion(.failure(.invalidRequest))
             return
         }

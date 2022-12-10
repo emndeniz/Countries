@@ -82,7 +82,7 @@ private class MockRequestHandler : RequestHandling {
     }
     
     
-    func request<T>(service: Countries.ServiceBase, completion: @escaping (Result<T, Countries.APIError>) -> Void) where T : Decodable {
+    func request<T>(service: APIRoute, completion: @escaping (Result<T, Countries.APIError>) -> Void) where T : Decodable {
         
         if isReturnFail {
             completion(.failure(.invalidData))

@@ -34,14 +34,14 @@ final class AllCountriesServiceTests: XCTestCase {
         
         MockURLProtocol.requestHandler = { request in
             guard let url = request.url, url == self.apiURL else {
-            throw fatalError("URLS are not matching")
+                throw fatalError("URLS are not matching. Expected: \(self.apiURL), found: \(request.url)")
           }
           
           let response = HTTPURLResponse(url: self.apiURL, statusCode: 200, httpVersion: nil, headerFields: nil)!
           return (response, data)
         }
         
-        sut.request(service: AllCountriesService.all) {
+        sut.request(service: .getAllCountries) {
             (result : Result<AllCountriesResponseModel, APIError>) in
             switch result {
                 
@@ -71,7 +71,7 @@ final class AllCountriesServiceTests: XCTestCase {
             return (response, data)
         }
         
-        sut.request(service: AllCountriesService.all) {
+        sut.request(service: .getAllCountries) {
             (result : Result<AllCountriesResponseModel, APIError>) in
             switch result {
                 

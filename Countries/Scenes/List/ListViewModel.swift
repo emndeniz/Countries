@@ -17,7 +17,7 @@ class ListViewModel : ObservableObject {
     }
   
     func getAPIData(){
-        requestHandler.request(service: AllCountriesService.all) { [weak self] (result : Result<AllCountriesResponseModel, APIError>) in
+        requestHandler.request(service: .getAllCountries) { [weak self] (result : Result<AllCountriesResponseModel, APIError>) in
             
             switch result {
                 
