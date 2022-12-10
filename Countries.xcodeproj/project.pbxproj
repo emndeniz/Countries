@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		012670B62944A5C200584314 /* ListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012670B52944A5C200584314 /* ListCellView.swift */; };
+		012670B62944A5C200584314 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012670B52944A5C200584314 /* CellView.swift */; };
 		012670B92944B7BC00584314 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012670B82944B7BC00584314 /* CellViewModel.swift */; };
 		012670BC2944B80F00584314 /* JSONTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012670BB2944B80F00584314 /* JSONTestHelper.swift */; };
 		012670BE2944B81D00584314 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012670BD2944B81D00584314 /* MockURLProtocol.swift */; };
@@ -26,7 +26,6 @@
 		0194F146293D507D00AE655A /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194F145293D507D00AE655A /* ListViewModel.swift */; };
 		0194F161293E86BD00AE655A /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194F160293E86BD00AE655A /* ListView.swift */; };
 		0194F163293E88E800AE655A /* CountriesDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194F162293E88E800AE655A /* CountriesDetailViewModel.swift */; };
-		0194F165293E896300AE655A /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194F164293E896300AE655A /* ListModel.swift */; };
 		0194F16E293E8C2000AE655A /* CountriesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194F16A293E8C0B00AE655A /* CountriesAppTests.swift */; };
 		0194F16F293E8C2500AE655A /* CountriesAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194F167293E8C0B00AE655A /* CountriesAppUITestsLaunchTests.swift */; };
 		0194F170293E8C2800AE655A /* CountriesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194F168293E8C0B00AE655A /* CountriesAppUITests.swift */; };
@@ -52,7 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		012670B52944A5C200584314 /* ListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellView.swift; sourceTree = "<group>"; };
+		012670B52944A5C200584314 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		012670B82944B7BC00584314 /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 		012670BB2944B80F00584314 /* JSONTestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTestHelper.swift; sourceTree = "<group>"; };
 		012670BD2944B81D00584314 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
@@ -74,7 +73,6 @@
 		0194F145293D507D00AE655A /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		0194F160293E86BD00AE655A /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		0194F162293E88E800AE655A /* CountriesDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesDetailViewModel.swift; sourceTree = "<group>"; };
-		0194F164293E896300AE655A /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		0194F167293E8C0B00AE655A /* CountriesAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0194F168293E8C0B00AE655A /* CountriesAppUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesAppUITests.swift; sourceTree = "<group>"; };
 		0194F16A293E8C0B00AE655A /* CountriesAppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesAppTests.swift; sourceTree = "<group>"; };
@@ -110,7 +108,7 @@
 		012670B72944B7A400584314 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				012670B52944A5C200584314 /* ListCellView.swift */,
+				012670B52944A5C200584314 /* CellView.swift */,
 				012670B82944B7BC00584314 /* CellViewModel.swift */,
 			);
 			path = Cell;
@@ -241,7 +239,6 @@
 				012670B72944B7A400584314 /* Cell */,
 				0194F145293D507D00AE655A /* ListViewModel.swift */,
 				0194F160293E86BD00AE655A /* ListView.swift */,
-				0194F164293E896300AE655A /* ListModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -443,12 +440,11 @@
 				0194F142293D506300AE655A /* QuerryCountriesService.swift in Sources */,
 				0194F13E293D506300AE655A /* AllCountriesResponseModel.swift in Sources */,
 				0194F143293D506300AE655A /* AllCountriesService.swift in Sources */,
-				0194F165293E896300AE655A /* ListModel.swift in Sources */,
 				0194F172293E8FE200AE655A /* DetialModel.swift in Sources */,
 				0194F163293E88E800AE655A /* CountriesDetailViewModel.swift in Sources */,
 				0194F161293E86BD00AE655A /* ListView.swift in Sources */,
 				0194F140293D506300AE655A /* RequestHandler.swift in Sources */,
-				012670B62944A5C200584314 /* ListCellView.swift in Sources */,
+				012670B62944A5C200584314 /* CellView.swift in Sources */,
 				012670BC2944B80F00584314 /* JSONTestHelper.swift in Sources */,
 				0194F146293D507D00AE655A /* ListViewModel.swift in Sources */,
 				012670B92944B7BC00584314 /* CellViewModel.swift in Sources */,

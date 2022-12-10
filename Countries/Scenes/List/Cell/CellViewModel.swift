@@ -8,6 +8,27 @@
 import Foundation
 
 
-struct CellViewModel {
+struct CellViewModel: Identifiable{
+    var id: String = UUID().uuidString
     
+    private let item:AllCountriesResponseModelElement?
+    
+
+    init(item: AllCountriesResponseModelElement?) {
+        self.item = item
+    }
+    
+    
+    var imageURL: URL? {
+        
+        guard let urlStr = item?.flags?.png else {
+            return nil
+        }
+        return URL(string: urlStr)
+    }
+    
+    var name: String {
+        return item?.name?.common ?? "Not Provided"
+    }
+
 }

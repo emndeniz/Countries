@@ -11,7 +11,42 @@ struct ListView: View {
     @ObservedObject var viewModel: ListViewModel
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            content()
+            .navigationTitle("Countries")
+        }
+        .onAppear(perform: viewModel.getAPIData)
+
+    }
+}
+
+
+private extension ListView {
+    func content() -> some View {
+        if  $viewModel.dataSource.isEmpty {
+            return AnyView(loading)
+      } else {
+          return AnyView(list)
+        
+      }
+    }
+    
+    var list: some View {
+        List{
+            ForEach(viewModel.dataSource){ item in
+                NavigationLink {
+                    CountryDetailView(viewModel: DetailViewModel())
+                } label: {
+                    CellView(viewModel: item)
+                }
+            }
+        }
+    }
+    
+    
+    var loading: some View {
+        Text("Loading...")
+        .foregroundColor(.gray)
     }
 }
 
