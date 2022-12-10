@@ -9,7 +9,7 @@ import Foundation
 
 enum APIRoute {
     case getAllCountries
-    //case querryCountryByName(name:String)
+    case querryCountryByName(name:String)
 
     private var baseURLString: String { "https://restcountries.com/v3.1/" }
 
@@ -18,8 +18,9 @@ enum APIRoute {
             
         case .getAllCountries:
             return URL(string: baseURLString + "all")
-//        case .querryCountryByName(name: let name):
-//            return URL(string: baseURLString + "name/" + name)
+        case .querryCountryByName(name: let name):
+            //return URL(string: baseURLString + "name/" + name)
+            return URL(string: baseURLString + "FIX_ME")
         }
     }
 

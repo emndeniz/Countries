@@ -1,5 +1,5 @@
 //
-//  AllCountriesRequestTests.swift
+//  DetailsServiceTests.swift
 //  CountriesAppTests
 //
 //  Created by Emin on 10.12.2022.
@@ -8,19 +8,23 @@
 import XCTest
 @testable import Countries
 
-final class AllCountriesServiceTests: XCTestCase {
+
+final class DetailsServiceTests: XCTestCase {
 
     var sut: RequestHandling!
     var expectation: XCTestExpectation!
     
-    let apiURL = URL(string: "https://restcountries.com/v3.1/all?")!
+    let apiURL = URL(string: "https://restcountries.com/v3.1/name/france?")!
+    let countryName = "france"
     
     override func setUpWithError() throws {
+        // Configuration required to Mock API requests.
         let configuration = URLSessionConfiguration.default
         configuration.protocolClasses = [MockURLProtocol.self]
         let urlSession = URLSession.init(configuration: configuration)
         
         sut = RequestHandler(urlSession: urlSession)
+        // Expectation required to wait background operations.
         expectation = expectation(description: "Expectation")
     }
 
@@ -28,9 +32,11 @@ final class AllCountriesServiceTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_givenAllCountriesRequest_whenResponseSuccessfull_thenShouldContainRequiredResponseModel() throws {
+    
+    /// In this case we are inserting success data via mock and expect decoded response.
+    func test_givenDetailsRequest_whenResponseSuccessfull_thenShouldContainRequiredResponseModel() throws {
         // Name of the sample response
-        let data = JSONTestHelper().readLocalFile(name: "AllCountriesResponse")
+        let data = JSONTestHelper().readLocalFile(name: "DetailSuccessResponse")
         
         MockURLProtocol.requestHandler = { request in
             guard let url = request.url, url == self.apiURL else {
@@ -41,28 +47,26 @@ final class AllCountriesServiceTests: XCTestCase {
           return (response, data)
         }
         
-        sut.request(service: .getAllCountries) {
-            (result : Result<AllCountriesResponseModel, APIError>) in
+        // Start test by calling the actual function
+        sut.request(service: .querryCountryByName(name: countryName)) {
+            (result : Result<CountryResponseModel, APIError>) in
+            
             switch result {
                 
             case .success(let response):
-                XCTAssertEqual(response.count, 3, "Total number of countries should be 250")
-                let firstCountry = response[0]
-                XCTAssertEqual(firstCountry.name?.common, "Bulgaria", "First country name is not matching")
-                XCTAssertEqual(firstCountry.region, "Europe", "First country region is not matching")
-                XCTAssertEqual(firstCountry.startOfWeek, "monday", "Start of the week not matching")
+                XCTAssertEqual(response.first?.name?.common, "France", "Common names are not matching")
+                XCTAssertEqual(response.first?.name?.official, "French Republic", "Official names are not matching")
             case .failure(let error):
                 XCTFail("Error was not expected: \(error.localizedDescription)")
             }
             self.expectation.fulfill()
         }
         wait(for: [expectation], timeout: 1.0)
-        
     }
 
     
-    func test_givenAllCountriesRequest_whenResponseFails_thenShouldReturnFail() throws {
-        
+    /// In this case we are inserting fail case via mock and expect fail return.
+    func test_givenDetailsRequest_whenResponseFailed_thenShouldReturnFail() throws {
         // For error case we can use empty data
         let data = Data()
         
@@ -71,7 +75,7 @@ final class AllCountriesServiceTests: XCTestCase {
             return (response, data)
         }
         
-        sut.request(service: .getAllCountries) {
+        sut.request(service: .querryCountryByName(name: countryName)) {
             (result : Result<AllCountriesResponseModel, APIError>) in
             switch result {
                 
@@ -85,6 +89,8 @@ final class AllCountriesServiceTests: XCTestCase {
         
         wait(for: [expectation], timeout: 1.0)
     }
-    
 
+   
+    
+    
 }
