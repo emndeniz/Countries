@@ -15,22 +15,34 @@ struct DetailView: View {
 
     
     var body: some View {
-        VStack {
-            
-            if let viewModel = viewModel.dataSource {
-                content
-            }else {
-                Text("Loading...")
-            }
-           
-        }.ignoresSafeArea()
+        
+        
+        content()
+            .ignoresSafeArea()
+            .onAppear(perform: viewModel.getAPIData)
     }
 }
 
 
 private extension DetailView {
-    var content : some View {
-        Text("Fill it")
+    func content() -> some View {
+        if  $viewModel.dataSource.isEmpty {
+            return AnyView(loading)
+      } else {
+          return AnyView(details)
+        
+      }
+    }
+    
+    var loading: some View {
+        Text("Loading...")
+        .foregroundColor(.gray)
+    }
+    
+    var details: some View {
+        VStack {
+            Text("Fill me!")
+        }
     }
 }
 
