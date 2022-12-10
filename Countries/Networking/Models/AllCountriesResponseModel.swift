@@ -18,7 +18,7 @@ struct AllCountriesResponseModelElement: Codable {
     let currencies: Currencies?
     let idd: Idd?
     let capital, altSpellings: [String]?
-    let region: Region?
+    let region: String?
     let subregion: String?
     let languages: [String: String]?
     let translations: [String: Translation]?
@@ -36,7 +36,7 @@ struct AllCountriesResponseModelElement: Codable {
     let timezones: [String]?
     let continents: [Continent]?
     let flags, coatOfArms: CoatOfArms?
-    let startOfWeek: StartOfWeek?
+    let startOfWeek: String?
     let capitalInfo: CapitalInfo?
     let postalCode: PostalCode?
 }
@@ -277,21 +277,6 @@ struct Aed: Codable {
 // MARK: - BAM
 struct BAM: Codable {
     let name: String?
-}
-
-enum Region: String, Codable {
-    case africa = "Africa"
-    case americas = "Americas"
-    case antarctic = "Antarctic"
-    case asia = "Asia"
-    case europe = "Europe"
-    case oceania = "Oceania"
-}
-
-enum StartOfWeek: String, Codable {
-    case monday = "monday"
-    case sunday = "sunday"
-    case saturday = "saturday"
 }
 
 enum Status: String, Codable {

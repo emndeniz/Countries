@@ -44,7 +44,8 @@ extension ServiceBase {
         if method == .get {
             // add query items to url
             guard let parameters = parameters as? [String: String] else {
-                fatalError("parameters for GET http method must conform to [String: String]")
+                print("We can't add body to GET request")
+                return nil
             }
             urlComponents?.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
         }

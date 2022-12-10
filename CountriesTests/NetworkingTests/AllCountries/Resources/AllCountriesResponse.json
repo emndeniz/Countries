@@ -1,0 +1,626 @@
+[
+  {
+    "name": {
+      "common": "Bulgaria",
+      "official": "Republic of Bulgaria",
+      "nativeName": {
+        "bul": {
+          "official": "Република България",
+          "common": "България"
+        }
+      }
+    },
+    "tld": [
+      ".bg"
+    ],
+    "cca2": "BG",
+    "ccn3": "100",
+    "cca3": "BGR",
+    "cioc": "BUL",
+    "independent": true,
+    "status": "officially-assigned",
+    "unMember": true,
+    "currencies": {
+      "BGN": {
+        "name": "Bulgarian lev",
+        "symbol": "лв"
+      }
+    },
+    "idd": {
+      "root": "+3",
+      "suffixes": [
+        "59"
+      ]
+    },
+    "capital": [
+      "Sofia"
+    ],
+    "altSpellings": [
+      "BG",
+      "Republic of Bulgaria",
+      "Република България"
+    ],
+    "region": "Europe",
+    "subregion": "Southeast Europe",
+    "languages": {
+      "bul": "Bulgarian"
+    },
+    "translations": {
+      "ara": {
+        "official": "جمهورية بلغاريا",
+        "common": "بلغاريا"
+      },
+      "bre": {
+        "official": "Republik Bulgaria",
+        "common": "Bulgaria"
+      },
+      "ces": {
+        "official": "Bulharská republika",
+        "common": "Bulharsko"
+      },
+      "cym": {
+        "official": "Gweriniaeth Bwlgaria",
+        "common": "Bwlgaria"
+      },
+      "deu": {
+        "official": "Republik Bulgarien",
+        "common": "Bulgarien"
+      },
+      "est": {
+        "official": "Bulgaaria Vabariik",
+        "common": "Bulgaaria"
+      },
+      "fin": {
+        "official": "Bulgarian tasavalta",
+        "common": "Bulgaria"
+      },
+      "fra": {
+        "official": "République de Bulgarie",
+        "common": "Bulgarie"
+      },
+      "hrv": {
+        "official": "Republika Bugarska",
+        "common": "Bugarska"
+      },
+      "hun": {
+        "official": "Bolgár Köztársaság",
+        "common": "Bulgária"
+      },
+      "ita": {
+        "official": "Repubblica di Bulgaria",
+        "common": "Bulgaria"
+      },
+      "jpn": {
+        "official": "ブルガリア共和国",
+        "common": "ブルガリア"
+      },
+      "kor": {
+        "official": "불가리아 공화국",
+        "common": "불가리아"
+      },
+      "nld": {
+        "official": "Republiek Bulgarije",
+        "common": "Bulgarije"
+      },
+      "per": {
+        "official": "جمهوری بلغارستان",
+        "common": "بلغارستان"
+      },
+      "pol": {
+        "official": "Republika Bułgarii",
+        "common": "Bułgaria"
+      },
+      "por": {
+        "official": "República da Bulgária",
+        "common": "Bulgária"
+      },
+      "rus": {
+        "official": "Республика Болгария",
+        "common": "Болгария"
+      },
+      "slk": {
+        "official": "Bulharská republika",
+        "common": "Bulharsko"
+      },
+      "spa": {
+        "official": "República de Bulgaria",
+        "common": "Bulgaria"
+      },
+      "swe": {
+        "official": "Republiken Bulgarien",
+        "common": "Bulgarien"
+      },
+      "tur": {
+        "official": "Bulgaristan Cumhuriyeti",
+        "common": "Bulgaristan"
+      },
+      "urd": {
+        "official": "جمہوریہ بلغاریہ",
+        "common": "بلغاریہ"
+      },
+      "zho": {
+        "official": "保加利亚共和国",
+        "common": "保加利亚"
+      }
+    },
+    "latlng": [
+      43.0,
+      25.0
+    ],
+    "landlocked": false,
+    "borders": [
+      "GRC",
+      "MKD",
+      "ROU",
+      "SRB",
+      "TUR"
+    ],
+    "area": 110879.0,
+    "demonyms": {
+      "eng": {
+        "f": "Bulgarian",
+        "m": "Bulgarian"
+      },
+      "fra": {
+        "f": "Bulgare",
+        "m": "Bulgare"
+      }
+    },
+    "flag": "\uD83C\uDDE7\uD83C\uDDEC",
+    "maps": {
+      "googleMaps": "https://goo.gl/maps/F5uAhDGWzc3BrHfm9",
+      "openStreetMaps": "https://www.openstreetmap.org/relation/186382"
+    },
+    "population": 6927288,
+    "gini": {
+      "2018": 41.3
+    },
+    "fifa": "BUL",
+    "car": {
+      "signs": [
+        "BG"
+      ],
+      "side": "right"
+    },
+    "timezones": [
+      "UTC+02:00"
+    ],
+    "continents": [
+      "Europe"
+    ],
+    "flags": {
+      "png": "https://flagcdn.com/w320/bg.png",
+      "svg": "https://flagcdn.com/bg.svg"
+    },
+    "coatOfArms": {
+      "png": "https://mainfacts.com/media/images/coats_of_arms/bg.png",
+      "svg": "https://mainfacts.com/media/images/coats_of_arms/bg.svg"
+    },
+    "startOfWeek": "monday",
+    "capitalInfo": {
+      "latlng": [
+        42.68,
+        23.32
+      ]
+    },
+    "postalCode": {
+      "format": "####",
+      "regex": "^(\\d{4})$"
+    }
+  },
+  {
+    "name": {
+      "common": "Botswana",
+      "official": "Republic of Botswana",
+      "nativeName": {
+        "eng": {
+          "official": "Republic of Botswana",
+          "common": "Botswana"
+        },
+        "tsn": {
+          "official": "Lefatshe la Botswana",
+          "common": "Botswana"
+        }
+      }
+    },
+    "tld": [
+      ".bw"
+    ],
+    "cca2": "BW",
+    "ccn3": "072",
+    "cca3": "BWA",
+    "cioc": "BOT",
+    "independent": true,
+    "status": "officially-assigned",
+    "unMember": true,
+    "currencies": {
+      "BWP": {
+        "name": "Botswana pula",
+        "symbol": "P"
+      }
+    },
+    "idd": {
+      "root": "+2",
+      "suffixes": [
+        "67"
+      ]
+    },
+    "capital": [
+      "Gaborone"
+    ],
+    "altSpellings": [
+      "BW",
+      "Republic of Botswana",
+      "Lefatshe la Botswana"
+    ],
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "languages": {
+      "eng": "English",
+      "tsn": "Tswana"
+    },
+    "translations": {
+      "ara": {
+        "official": "جمهورية بوتسوانا",
+        "common": "بوتسوانا"
+      },
+      "bre": {
+        "official": "Republik Botswana",
+        "common": "Botswana"
+      },
+      "ces": {
+        "official": "Botswanská republika",
+        "common": "Botswana"
+      },
+      "cym": {
+        "official": "Republic of Botswana",
+        "common": "Botswana"
+      },
+      "deu": {
+        "official": "Republik Botsuana",
+        "common": "Botswana"
+      },
+      "est": {
+        "official": "Botswana Vabariik",
+        "common": "Botswana"
+      },
+      "fin": {
+        "official": "Botswanan tasavalta",
+        "common": "Botswana"
+      },
+      "fra": {
+        "official": "République du Botswana",
+        "common": "Botswana"
+      },
+      "hrv": {
+        "official": "Republika Bocvana",
+        "common": "Bocvana"
+      },
+      "hun": {
+        "official": "Botswanai Köztársaság",
+        "common": "Botswana"
+      },
+      "ita": {
+        "official": "Repubblica del Botswana",
+        "common": "Botswana"
+      },
+      "jpn": {
+        "official": "ボツワナ共和国",
+        "common": "ボツワナ"
+      },
+      "kor": {
+        "official": "보츠와나 공화국",
+        "common": "보츠와나"
+      },
+      "nld": {
+        "official": "Republiek Botswana",
+        "common": "Botswana"
+      },
+      "per": {
+        "official": "جمهوری بوتسوانا",
+        "common": "بوتسوانا"
+      },
+      "pol": {
+        "official": "Republika Botswany",
+        "common": "Botswana"
+      },
+      "por": {
+        "official": "República do Botswana",
+        "common": "Botswana"
+      },
+      "rus": {
+        "official": "Республика Ботсвана",
+        "common": "Ботсвана"
+      },
+      "slk": {
+        "official": "Botswanská republika",
+        "common": "Botswana"
+      },
+      "spa": {
+        "official": "República de Botswana",
+        "common": "Botswana"
+      },
+      "swe": {
+        "official": "Republiken Botswana",
+        "common": "Botswana"
+      },
+      "tur": {
+        "official": "Botsvana Cumhuriyeti",
+        "common": "Botsvana"
+      },
+      "urd": {
+        "official": "جمہوریہ بوٹسوانا",
+        "common": "بوٹسوانا"
+      },
+      "zho": {
+        "official": "博茨瓦纳共和国",
+        "common": "博茨瓦纳"
+      }
+    },
+    "latlng": [
+      -22.0,
+      24.0
+    ],
+    "landlocked": true,
+    "borders": [
+      "NAM",
+      "ZAF",
+      "ZMB",
+      "ZWE"
+    ],
+    "area": 582000.0,
+    "demonyms": {
+      "eng": {
+        "f": "Motswana",
+        "m": "Motswana"
+      },
+      "fra": {
+        "f": "Botswanaise",
+        "m": "Botswanais"
+      }
+    },
+    "flag": "\uD83C\uDDE7\uD83C\uDDFC",
+    "maps": {
+      "googleMaps": "https://goo.gl/maps/E364KeLy6N4JwxwQ8",
+      "openStreetMaps": "https://www.openstreetmap.org/relation/1889339"
+    },
+    "population": 2351625,
+    "gini": {
+      "2015": 53.3
+    },
+    "fifa": "BOT",
+    "car": {
+      "signs": [
+        "BW"
+      ],
+      "side": "left"
+    },
+    "timezones": [
+      "UTC+02:00"
+    ],
+    "continents": [
+      "Africa"
+    ],
+    "flags": {
+      "png": "https://flagcdn.com/w320/bw.png",
+      "svg": "https://flagcdn.com/bw.svg"
+    },
+    "coatOfArms": {
+      "png": "https://mainfacts.com/media/images/coats_of_arms/bw.png",
+      "svg": "https://mainfacts.com/media/images/coats_of_arms/bw.svg"
+    },
+    "startOfWeek": "monday",
+    "capitalInfo": {
+      "latlng": [
+        -24.63,
+        25.9
+      ]
+    }
+  },
+  {
+    "name": {
+      "common": "Guinea",
+      "official": "Republic of Guinea",
+      "nativeName": {
+        "fra": {
+          "official": "République de Guinée",
+          "common": "Guinée"
+        }
+      }
+    },
+    "tld": [
+      ".gn"
+    ],
+    "cca2": "GN",
+    "ccn3": "324",
+    "cca3": "GIN",
+    "cioc": "GUI",
+    "independent": true,
+    "status": "officially-assigned",
+    "unMember": true,
+    "currencies": {
+      "GNF": {
+        "name": "Guinean franc",
+        "symbol": "Fr"
+      }
+    },
+    "idd": {
+      "root": "+2",
+      "suffixes": [
+        "24"
+      ]
+    },
+    "capital": [
+      "Conakry"
+    ],
+    "altSpellings": [
+      "GN",
+      "Republic of Guinea",
+      "République de Guinée"
+    ],
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "languages": {
+      "fra": "French"
+    },
+    "translations": {
+      "ara": {
+        "official": "جمهورية غينيا",
+        "common": "غينيا"
+      },
+      "bre": {
+        "official": "Republik Ginea",
+        "common": "Ginea"
+      },
+      "ces": {
+        "official": "Guinejská republika",
+        "common": "Guinea"
+      },
+      "cym": {
+        "official": "Republic of Guinea",
+        "common": "Guinea"
+      },
+      "deu": {
+        "official": "Republik Guinea",
+        "common": "Guinea"
+      },
+      "est": {
+        "official": "Guinea Vabariik",
+        "common": "Guinea"
+      },
+      "fin": {
+        "official": "Guinean tasavalta",
+        "common": "Guinea"
+      },
+      "fra": {
+        "official": "République de Guinée",
+        "common": "Guinée"
+      },
+      "hrv": {
+        "official": "Republika Gvineja",
+        "common": "Gvineja"
+      },
+      "hun": {
+        "official": "Guineai Köztársaság",
+        "common": "Guinea"
+      },
+      "ita": {
+        "official": "Repubblica di Guinea",
+        "common": "Guinea"
+      },
+      "jpn": {
+        "official": "ギニア共和国",
+        "common": "ギニア"
+      },
+      "kor": {
+        "official": "기니 공화국",
+        "common": "기니"
+      },
+      "nld": {
+        "official": "Republiek Guinee",
+        "common": "Guinee"
+      },
+      "per": {
+        "official": "مملکت مستقل پاپوآ گینه نو",
+        "common": "پاپوآ گینه نو"
+      },
+      "pol": {
+        "official": "Republika Gwinei",
+        "common": "Gwinea"
+      },
+      "por": {
+        "official": "República da Guiné",
+        "common": "Guiné"
+      },
+      "rus": {
+        "official": "Республика Гвинея",
+        "common": "Гвинея"
+      },
+      "slk": {
+        "official": "Guinejská republika",
+        "common": "Guinea"
+      },
+      "spa": {
+        "official": "República de Guinea",
+        "common": "Guinea"
+      },
+      "swe": {
+        "official": "Republiken Guinea",
+        "common": "Guinea"
+      },
+      "tur": {
+        "official": "Gine Cumhuriyeti",
+        "common": "Gine"
+      },
+      "urd": {
+        "official": "جمہوریہ گنی",
+        "common": "گنی"
+      },
+      "zho": {
+        "official": "几内亚共和国",
+        "common": "几内亚"
+      }
+    },
+    "latlng": [
+      11.0,
+      -10.0
+    ],
+    "landlocked": false,
+    "borders": [
+      "CIV",
+      "GNB",
+      "LBR",
+      "MLI",
+      "SEN",
+      "SLE"
+    ],
+    "area": 245857.0,
+    "demonyms": {
+      "eng": {
+        "f": "Guinean",
+        "m": "Guinean"
+      },
+      "fra": {
+        "f": "Guinéenne",
+        "m": "Guinéen"
+      }
+    },
+    "flag": "\uD83C\uDDEC\uD83C\uDDF3",
+    "maps": {
+      "googleMaps": "https://goo.gl/maps/8J5oM5sA4Ayr1ZYGA",
+      "openStreetMaps": "https://www.openstreetmap.org/relation/192778"
+    },
+    "population": 13132792,
+    "gini": {
+      "2012": 33.7
+    },
+    "fifa": "GUI",
+    "car": {
+      "signs": [
+        "RG"
+      ],
+      "side": "right"
+    },
+    "timezones": [
+      "UTC"
+    ],
+    "continents": [
+      "Africa"
+    ],
+    "flags": {
+      "png": "https://flagcdn.com/w320/gn.png",
+      "svg": "https://flagcdn.com/gn.svg"
+    },
+    "coatOfArms": {
+      "png": "https://mainfacts.com/media/images/coats_of_arms/gn.png",
+      "svg": "https://mainfacts.com/media/images/coats_of_arms/gn.svg"
+    },
+    "startOfWeek": "monday",
+    "capitalInfo": {
+      "latlng": [
+        9.5,
+        -13.7
+      ]
+    }
+  }
+]
