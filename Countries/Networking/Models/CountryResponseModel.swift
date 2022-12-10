@@ -20,7 +20,7 @@ struct CountryResponseModelElement: Codable {
     let region, subregion: String?
     let languages: Languages?
     let translations: [String: Translation]?
-    let latlng: [Int]?
+    let latlng: [Double]?
     let landlocked: Bool?
     let borders: [String]?
     let area: Int?
