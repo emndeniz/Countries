@@ -35,7 +35,7 @@ private extension ListView {
         List{
             ForEach(viewModel.dataSource){ item in
                 NavigationLink {
-                    DetailView(viewModel: DetailViewModel())
+                    DetailView(viewModel: DetailViewModel(countryName: item.name))
                 } label: {
                     CellView(viewModel: item)
                 }

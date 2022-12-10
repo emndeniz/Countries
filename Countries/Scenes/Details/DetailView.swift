@@ -16,7 +16,13 @@ struct DetailView: View {
     
     var body: some View {
         VStack {
-            Text("Loading...")
+            
+            if let viewModel = viewModel.dataSource {
+                content
+            }else {
+                Text("Loading...")
+            }
+           
         }.ignoresSafeArea()
     }
 }
@@ -34,6 +40,6 @@ private extension DetailView {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(viewModel: DetailViewModel())
+        DetailView(viewModel: DetailViewModel(countryName: "germany"))
     }
 }

@@ -16,6 +16,7 @@
 		012670CC2944F15000584314 /* APIRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012670CB2944F15000584314 /* APIRoute.swift */; };
 		012670CE2944F44700584314 /* DetailSuccessResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 012670CD2944F44700584314 /* DetailSuccessResponse.json */; };
 		012670D02944F5AB00584314 /* DetailsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012670CF2944F5AB00584314 /* DetailsServiceTests.swift */; };
+		012670D22944FE0400584314 /* DetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012670D12944FE0400584314 /* DetailsViewModelTests.swift */; };
 		0194F10C293D500400AE655A /* CountriesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194F10B293D500400AE655A /* CountriesApp.swift */; };
 		0194F10E293D500400AE655A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0194F10D293D500400AE655A /* DetailView.swift */; };
 		0194F110293D500600AE655A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0194F10F293D500600AE655A /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		012670CB2944F15000584314 /* APIRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRoute.swift; sourceTree = "<group>"; };
 		012670CD2944F44700584314 /* DetailSuccessResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DetailSuccessResponse.json; sourceTree = "<group>"; };
 		012670CF2944F5AB00584314 /* DetailsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsServiceTests.swift; sourceTree = "<group>"; };
+		012670D12944FE0400584314 /* DetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModelTests.swift; sourceTree = "<group>"; };
 		0194F108293D500400AE655A /* Countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0194F10B293D500400AE655A /* CountriesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesApp.swift; sourceTree = "<group>"; };
 		0194F10D293D500400AE655A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 		0194F176293E909E00AE655A /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				012670D12944FE0400584314 /* DetailsViewModelTests.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 			files = (
 				012670CA2944B98100584314 /* AllCountriesServiceTests.swift in Sources */,
 				0194F178293E90B200AE655A /* ListViewModelTests.swift in Sources */,
+				012670D22944FE0400584314 /* DetailsViewModelTests.swift in Sources */,
 				012670D02944F5AB00584314 /* DetailsServiceTests.swift in Sources */,
 				0194F16E293E8C2000AE655A /* CountriesAppTests.swift in Sources */,
 			);
