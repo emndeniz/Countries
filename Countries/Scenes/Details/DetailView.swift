@@ -29,7 +29,7 @@ private extension DetailView {
         if  $viewModel.dataSource.isEmpty {
             return AnyView(loading)
       } else {
-          return AnyView(details)
+          return AnyView(details(model: viewModel.dataSource.first!))
         
       }
     }
@@ -39,10 +39,12 @@ private extension DetailView {
         .foregroundColor(.gray)
     }
     
-    var details: some View {
+    func details(model:DetailModel) -> some View {
+        
         VStack {
             Text("Fill me!")
         }
+        
     }
 }
 

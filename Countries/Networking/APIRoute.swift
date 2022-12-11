@@ -20,7 +20,7 @@ enum APIRoute {
             return URL(string: baseURLString + "all")
         case .querryCountryByName(name: let name):
             //return URL(string: baseURLString + "name/" + name)
-            return URL(string: baseURLString + "FIX_ME")
+            return URL(string: baseURLString + "")
         }
     }
 

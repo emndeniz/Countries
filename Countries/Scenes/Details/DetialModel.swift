@@ -12,19 +12,17 @@ import MapKit
 class DetailModel {
     
     private let item:CountryResponseModelElement?
-
+    
     private let missingDataText = "Data missing"
-
-    private let numberFormatter = NumberFormatter()
+    
     @Published var location: MKCoordinateRegion
     
     init(item: CountryResponseModelElement?) {
-            self.item = item
-            numberFormatter.numberStyle = .decimal
-            self.location = MKCoordinateRegion(center:
-                                                CLLocationCoordinate2D(latitude:  item?.capitalInfo?.latlng?.first ?? 0,
-                                                                       longitude:  item?.capitalInfo?.latlng?.last ?? 0),
-                                               span: MKCoordinateSpan(latitudeDelta: 9, longitudeDelta: 9))
+        self.item = item
+        self.location = MKCoordinateRegion(center:
+                                            CLLocationCoordinate2D(latitude:  item?.capitalInfo?.latlng?.first ?? 0,
+                                                                   longitude:  item?.capitalInfo?.latlng?.last ?? 0),
+                                           span: MKCoordinateSpan(latitudeDelta: 9, longitudeDelta: 9))
     }
     
     
@@ -37,7 +35,7 @@ class DetailModel {
     }
     
     var officialName : String {
-        return "Official Name:"
+        return "Official Name: "
     }
     
     var capital : String {
@@ -49,11 +47,12 @@ class DetailModel {
     }
     
     var area : String {
-        return String(format: "%.1f", "123456")
+        return "Area: "
     }
     
     var population : String {
-        return String(format: "%.1f", "123456")
+        return "Population: "
     }
+    
     
 }
