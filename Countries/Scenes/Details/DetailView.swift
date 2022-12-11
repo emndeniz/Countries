@@ -42,7 +42,33 @@ private extension DetailView {
     func details(model:DetailModel) -> some View {
         
         VStack {
-            Text("Fill me!")
+            AsyncImage(url: model.flagURL) { image in
+                               image
+                                   .resizable()
+                                   .aspectRatio(contentMode: .fill)
+                                   
+                               
+                           } placeholder: {
+                               Color.gray
+                           }
+                           .frame(height: 240)
+                           
+            Group {
+                Text(model.commonName)
+                Text(model.officialName)
+                Text(model.capital)
+                Text(model.area)
+                Text(model.population)
+                Text(model.region)
+            }
+            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                        .padding([.leading, .trailing], 16)
+                        .padding([.top, .bottom], 12)
+            
+            Map(coordinateRegion: $viewModel.dataSource.first!.location)
+                .padding([.leading, .trailing, .top], 16)
+                .padding([.bottom], 24)
+            
         }
         
     }
