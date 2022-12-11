@@ -27,31 +27,38 @@ class DetailModel {
     
     
     var flagURL : URL? {
-        return URL(string:"")
+        guard let flagURL = item?.flags?.png else { return nil }
+        return URL(string:flagURL)
     }
     
     var commonName : String {
-        return ""
+        return item?.name?.common ?? missingDataText
     }
     
     var officialName : String {
-        return "Official Name: "
+        return "Official Name: " + (item?.name?.official ?? missingDataText)
     }
     
     var capital : String {
-        return "Capital: "
+        return "Capital: " + (item?.capital?.first ?? missingDataText)
     }
     
     var region : String {
-        return "Region: "
+        return "Region: " + (item?.region ?? missingDataText)
     }
     
     var area : String {
-        return "Area: "
+        guard let area = StringUtilities.convertIntToFormattedString(intValue: item?.area) else {
+            return "Area: " + missingDataText
+        }
+        return "Area: " + area
     }
     
     var population : String {
-        return "Population: "
+        guard let population = StringUtilities.convertIntToFormattedString(intValue: item?.population) else {
+            return "Population: " + missingDataText
+        }
+        return "Population: " + population
     }
     
     
