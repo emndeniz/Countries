@@ -1,18 +1,15 @@
-//
-//  APIRoute.swift
-//  Countries
-//
-//  Created by Emin on 10.12.2022.
-//
-
 import Foundation
 
 enum APIRoute {
+    // Endpoints that view layers will call.
     case getAllCountries
     case querryCountryByName(name:String)
 
+    // Base url of the Countries API
     private var baseURLString: String { "https://restcountries.com/v3.1/" }
 
+    // Computed property for URL generation
+    // Required parameters appending to this property.
     private var url: URL? {
         switch self {
             
@@ -23,6 +20,7 @@ enum APIRoute {
         }
     }
 
+    // URL body params. (In this article we won't use it)
     private var parameters: [URLQueryItem] {
         switch self {
         default:
@@ -30,6 +28,8 @@ enum APIRoute {
         }
     }
 
+    // This func creates request with the given parameters.
+    // We will use this request in the RequestHandler to execute requests.
     func asRequest() -> URLRequest? {
         guard let url = url else {
             print("Missing URL for route: \(self)")
