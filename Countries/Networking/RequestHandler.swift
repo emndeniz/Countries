@@ -26,8 +26,7 @@ class RequestHandler: RequestHandling {
     ///   - decodeType: Decoder Type to return response
     ///   - completion: Completion with Service Result
     func request<T>(service: APIRoute, completion: @escaping (Result<T, APIError>) -> Void) where T : Decodable {
-    //func request<U>(service:T, decodeType: U.Type, completion: @escaping ((ServiceResult<U>) -> Void)) where U: Decodable {
-        guard let request = service.asRequest() else {
+          guard let request = service.asRequest() else {
             completion(.failure(.invalidRequest))
             return
         }
@@ -59,7 +58,7 @@ class RequestHandler: RequestHandling {
     ///   - completion: Completion block.
     private func execute(_ request:URLRequest,
                              deliveryQueue:DispatchQueue = DispatchQueue.main,
-                             completion: @escaping ((ServiceResult<Data>) -> Void)){
+                             completion: @escaping ((Result<Data, APIError>) -> Void)) {
         
         urlSession.dataTask(with: request) { data, response , error in
             
@@ -83,11 +82,6 @@ class RequestHandler: RequestHandling {
     
 }
 
-/// Service Results Enum will return easy to undestand API responses to upper layers.
-enum ServiceResult<T> {
-    case success(T)
-    case failure(APIError)
-}
 
 /// Customized APIErrors for the app
 enum APIError: Error {
